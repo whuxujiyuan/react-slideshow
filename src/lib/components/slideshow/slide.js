@@ -181,7 +181,7 @@ class Slideshow extends Component {
       const value = { margin: -this.width * (this.state.index + 1) };
       const tween = new TWEEN.Tween(value)
         .to({ margin: -this.width * (index + 1) }, transitionDuration)
-        .easing(TWEEN.Easing.Quadratic.Out)
+        .easing(TWEEN.Easing.Quadratic.InOut)
         .onUpdate(value => {
           this.imageContainer.style.transform = `translate(${value.margin}px)`;
         })

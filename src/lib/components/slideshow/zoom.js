@@ -205,6 +205,7 @@ class Zoom extends Component {
     animate();
 
     const tween = new TWEEN.Tween(value)
+      .easing(TWEEN.Easing.Quadratic.InOut)
       .to({ opacity: 1, scale }, transitionDuration)
       .onUpdate(value => {
         this.divsContainer.children[newIndex].style.opacity = value.opacity;

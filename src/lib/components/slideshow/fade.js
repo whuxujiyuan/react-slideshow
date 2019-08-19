@@ -201,6 +201,7 @@ class Fade extends Component {
 
     const tween = new TWEEN.Tween(value)
       .to({ opacity: 1 }, transitionDuration)
+      .easing(TWEEN.Easing.Quadratic.InOut)
       .onUpdate(value => {
         this.divsContainer.children[newIndex].style.opacity = value.opacity;
         this.divsContainer.children[index].style.opacity = 1 - value.opacity;
